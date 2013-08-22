@@ -3,6 +3,7 @@ class IdeasController < ApplicationController
   # GET /ideas.json
   def index
     @ideas = Idea.all
+    
 
     respond_to do |format|
       format.html # index.html.erb
