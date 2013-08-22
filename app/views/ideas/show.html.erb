@@ -10,9 +10,11 @@
   <%= @idea.description %>
 </p>
 
+<!-- Changed from outputting @idea.picture, which was just a string, to outputting an image tag pointing to the URL for the uploaded picture (stored in @idea.picture), but ONLY IF a picture has been uploaded for this idea. -->
 <p>
   <b>Picture:</b>
-  <%= @idea.picture %>
+  <!-- <%= @idea.picture %> -->
+  <%= image_tag(@idea.picture_url) if @idea.picture.present? %>
 </p>
 
 
