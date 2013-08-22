@@ -1,4 +1,8 @@
 Ideator::Application.routes.draw do
+  resources :students
+
+
+  root to: 'ideas#index'
   resources :ideas
 
 
